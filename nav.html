@@ -58,18 +58,31 @@
 <body>
 
 	<nav class="navMenu  border">
-		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
-		<a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a>
-		<a id="week" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Planner</a>
-		<a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Projects</a>
-		<a id="tasks" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Tasks</a>
-		<a id="business" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> Business</a>
-		<a id="knowledge" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lightbulb"></i> Knowledge</a>
-		<a id="topics" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-layer-group"></i> Topics</a>
-		<a id="notes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Notes</a>
-		<a id="media" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bookmark"></i> Media</a>
-		<a id="resourses" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-wrench"></i> Resourses</a>
-		<a id="lifewiki" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-heart"></i> Lifewiki</a>
+		<a id="goal" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bullseye" style="color: #010409;"></i> Goals</a>
+		<a id="milestones" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bolt" style="color: #000205;"></i> Milenstones</a>
+		<a id="bucket list" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bucket" style="color: #000205;"></i> Bucket list</a>
+		<a id="Travel planner" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-plane" style="color: #000205;"></i> Travel planner</a>
+		<a id="wishlist" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cart-shopping" style="color: #000205;"></i> Whishlist</a>
+		<a id="shopping list" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cart-shopping" style="color: #000205;"></i> Shopping list</a>
+		<a id="personal information" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-person-dress" style="color: #000205;"></i> Personal information</a>
+		<a id="french" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-f" style="color: #000205;"></i> French</a>
+		<a id="korean" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-k" style="color: #000205;"></i>Korean</a>
+		<a id="dramas" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-film" style="color: #000000;"></i> Dramas</a>
+		<a id="anime wishlist" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-clapperboard" style="color: #00040a;"></i> Anime wishlist</a>
+		<a id="daily planner" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-day" style="color: #00060f;"></i> Daily planner</a>
+                <a id="weekly" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-day" style="color: #00060f;"></i> Weekly</a>
+                <a id="Monthly" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-day" style="color: #00060f;"></i>Monthly</a>
+                <a id="household" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-house" style="color: #000000;"></i> Household</a>
+                <a id="movies & series" onclick="navigate(this.id)" href="#">  <i class="fa-solid fa-film" style="color: #000000;"></i>Movies & series</a>
+                <a id="podcast" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-music" style="color: #000000;"></i> Podcast</a>
+                <a id="meal planner" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-cheese" style="color: #00040a;"></i> Meal planner</a>
+                <a id="journal" onclick="navigate(this.id)" href="#"><i class="fa-solid fa-book-journal-whills" style="color: #000205;"></i> Journal</a>
+                <a id="habit tracker" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-face-grin-stars" style="color: #00040a;"></i> Habit tracker</a>
+                <a id="mood tracker" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-face-grin-stars" style="color: #00040a;"></i> Mood tracker</a>
+                <a id="budget" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-check" style="color: #000000;"></i> Budget</a>
+                <a id="Income tracker" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-check" style="color: #000000;"></i> Income tracker</a>
+                <a id="Expense tracker" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-transfer" style="color: #000205;"></i>Expense tracker</a>
+                <a id="Saving tracker" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-check" style="color: #000000;"></i>Saving tracker</a>
 
 
 
@@ -78,7 +91,7 @@
 
 	<script>
 
-		let direction = "horizontal";
+		let direction = "vertical";
 		if (direction === "vertical") {
 			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
 		}
@@ -86,32 +99,57 @@
 
 		function navigate(id) {
 
-			if (id == 'home')
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "inbox")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "week")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "month")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "projects")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "business")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "tasks")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "knowledge")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "topics")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "notes")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "media")
-				window.open("https://example.com", '_blank').focus();
-			else if (id == "resourses")
-				window.open("https://example.com3", '_blank').focus();
-			else if (id == "lifewiki")
-				window.open("https://example.com", '_blank').focus();
+			if (id == 'goal')
+				window.open("https://goal.com", '_blank').focus();
+			else if (id == "milestons")
+				window.open("https://milestons.com", '_blank').focus();
+			else if (id == "bucket list")
+				window.open("https://bucket list.com", '_blank').focus();
+			else if (id == "Travel planner")
+				window.open("https://Travel planner.com", '_blank').focus();
+			else if (id == "wishlist")
+				window.open("https://wishlist.com", '_blank').focus();
+			else if (id == "shopping list")
+				window.open("https://shopping list.com", '_blank').focus();
+			else if (id == "personal information")
+				window.open("https://personal information.com", '_blank').focus();
+			else if (id == "french")
+				window.open("https://french.com", '_blank').focus();
+			else if (id == "korean")
+				window.open("https://korean.com", '_blank').focus();
+			else if (id == "dramas")
+				window.open("https://dramas.com", '_blank').focus();
+			else if (id == "anime wishlist")
+				window.open("https://anime wishlist.com", '_blank').focus();
+			else if (id == "daily planner")
+				window.open("https://daily planner.com", '_blank').focus();
+			else if (id == "weekly")
+				window.open("https://weekly.com", '_blank').focus();
+                        else if (id == "Monthly")
+				window.open("https://Monthly.com", '_blank').focus();
+                        else if (id == "household")
+				window.open("https://household.com", '_blank').focus();
+                        else if (id == "movies & series")
+				window.open("https://movie & series.com", '_blank').focus();
+                        else if (id == "podcast")
+				window.open("https://podcast.com", '_blank').focus();
+                        else if (id == "meal planner")
+				window.open("https://meal planner.com", '_blank').focus();
+                        else if (id == "journal")
+				window.open("https://journal.com", '_blank').focus();
+                        else if (id == "habit tracker")
+				window.open("https://habit tracker.com", '_blank').focus();
+                        else if (id == "mood tracker")
+				window.open("https://mood tracker.com", '_blank').focus();
+                        else if (id == "budget")
+				window.open("https://budget.com", '_blank').focus();
+                        else if (id == "Income tracker")
+				window.open("https://Income tracker.com", '_blank').focus();
+                        else if (id == "Expense tracker")
+				window.open("https://Expense.com", '_blank').focus();
+                        else if (id == "Saving tracker")
+				window.open("https://Saving tracker.com", '_blank').focus();
+
 
 		}
 	</script>
